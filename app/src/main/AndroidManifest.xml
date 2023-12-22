@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Capstone"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.pages.recipe.TestPage"
+            android:exported="false"
+            android:label="@string/title_activity_test_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.WelcomePage"
+            android:exported="false"
+            android:label="@string/title_activity_detail_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.main.MainPage"
+            android:exported="false"
+            android:label="@string/title_activity_detail_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.SmartFridgeApp"
+            android:exported="false"
+            android:label="@string/title_activity_detail_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.login.LoginPage"
+            android:exported="false"
+            android:label="@string/title_activity_detail_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.register.SignUpPage"
+            android:exported="false"
+            android:label="@string/title_activity_detail_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.recipe.RecipePage"
+            android:exported="false"
+            android:label="@string/title_activity_detail_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.SplashScreen.SplashPage"
+            android:exported="false"
+            android:label="@string/title_activity_splash_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.component.JetToast"
+            android:exported="false"
+            android:label="@string/title_activity_jet_toast"
+            android:theme="@style/Theme.Capstone" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.capstone.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/path_provider" />
+        </provider>
+
+        <activity
+            android:name=".ui.pages.upload.UploadPage"
+            android:exported="false"
+            android:label="@string/title_activity_upload_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.DetailPage"
+            android:exported="false"
+            android:label="@string/title_activity_detail_page"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.component.JetTopBar"
+            android:exported="false"
+            android:label="@string/title_activity_jet_top_bar"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.component.JetSearchBar"
+            android:exported="false"
+            android:label="@string/title_activity_jet_search_bar"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.component.JetButton"
+            android:exported="false"
+            android:label="@string/title_activity_jet_button"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.component.JetTextField"
+            android:exported="false"
+            android:label="@string/title_activity_text_field"
+            android:theme="@style/Theme.Capstone" />
+        <activity
+            android:name=".ui.pages.MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Capstone">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.google.android.gms.metadata.ModuleDependencies"
+            android:enabled="false"
+            android:exported="false"
+            tools:ignore="MissingClass">
+            <intent-filter>
+                <action android:name="com.google.android.gms.metadata.MODULE_DEPENDENCIES" />
+            </intent-filter>
+
+            <meta-data
+                android:name="photopicker_activity:0:required"
+                android:value="" />
+        </service>
+    </application>
+
+</manifest>

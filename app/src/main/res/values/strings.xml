@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">capstone</string>
+    <string name="title_activity_text_field">TextField</string>
+    <string name="title_activity_jet_button">JetButton</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_jet_search_bar">JetSearchBar</string>
+    <string name="title_activity_main_page">MainPage</string>
+    <string name="title_activity_jet_top_bar">JetTopBar</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_activity_detail_page">DetailPage</string>
+    <string name="title_activity_upload_page">UploadPage</string>
+    <string name="title_activity_jet_toast">JetToast</string>
+    <string name="title_activity_splash_page">SplashPage</string>
+    <string name="title_activity_test_page">TestPage</string>
+</resources>
